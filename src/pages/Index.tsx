@@ -121,6 +121,11 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
+            <div className="mt-12">
+              <Button onClick={() => window.open(whatsappLink, '_blank')} size="lg" className="bg-red-900 hover:bg-red-800 text-white rounded-full px-10 py-6 text-lg">
+                Quero fazer as pazes com meu corpo
+              </Button>
+            </div>
           </div>
         </section>
         
@@ -151,6 +156,11 @@ const Index = () => {
               <CarouselPrevious className="hidden md:flex" />
               <CarouselNext className="hidden md:flex" />
             </Carousel>
+            <div className="text-center mt-12">
+              <Button onClick={() => window.open(whatsappLink, '_blank')} size="lg" className="bg-red-900 hover:bg-red-800 text-white rounded-full px-10 py-6 text-lg">
+                Agende sua consulta e comece a mudança
+              </Button>
+            </div>
           </div>
         </section>
 
