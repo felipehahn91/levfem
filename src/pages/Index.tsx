@@ -23,7 +23,7 @@ const Index = () => {
       {/* Header */}
       <header className="py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-rose-50/80 backdrop-blur-sm z-10 shadow-sm">
         <a href="#">
-          <img src="/logo-full.jpeg" alt="Logo Thaís Aires" className="h-16" />
+          <img src="/logo-full.png" alt="Logo Thaís Aires" className="h-16" />
         </a>
         <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6">
           Agendar Consulta
@@ -178,7 +178,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-stone-800 text-white py-8 px-6 md:px-12 text-center">
-        <img src="/logo-full.jpeg" alt="Logo Thaís Aires" className="h-20 mx-auto mb-4" style={{ filter: 'brightness(0) invert(1)' }}/>
+        <img src="/logo-full.png" alt="Logo Thaís Aires" className="h-20 mx-auto mb-4" style={{ filter: 'brightness(0) invert(1)' }}/>
         <p>&copy; {new Date().getFullYear()} Thaís Aires Nutricionista. Todos os direitos reservados.</p>
       </footer>
     </div>
