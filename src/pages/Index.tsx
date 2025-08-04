@@ -62,8 +62,29 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Como funciona? */}
+        {/* About Thais Section */}
         <section className="py-20 px-6 md:px-12 bg-white">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center">
+              <img src="/thais-aires-desk.jpeg" alt="Nutricionista Thaís Aires" className="rounded-lg shadow-xl w-full max-w-sm" />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-stone-800 mb-4">Prazer, sou Thaís Aires. Sua nutricionista.</h2>
+              <p className="text-lg mb-4 text-stone-600">
+                Há 12 anos, dedico minha carreira a cuidar da saúde da mulher. Sou especialista em emagrecimento e modulação intestinal, mas minha verdadeira missão é ensinar uma nutrição sem terrorismo, que te reconecta com o seu corpo.
+              </p>
+              <p className="text-lg mb-6 text-stone-600">
+                Eu te ajudo a recuperar a autoestima, emagrecer sem passar fome e fazer escolhas mais saudáveis com consciência e leveza. Atendo no Rio de Janeiro e online para o mundo todo, sempre com um olhar acolhedor.
+              </p>
+              <p className="text-md text-stone-500">
+                Quando não estou no consultório, amo estar com minha família, viajar e dançar. Acredito que a vida, assim como a alimentação, deve ser cheia de alegria e equilíbrio.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Como funciona? */}
+        <section className="py-20 px-6 md:px-12">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-stone-800 mb-12">Sua jornada de transformação, passo a passo</h2>
             <p className="text-center text-lg mb-12 max-w-3xl mx-auto">Meu acompanhamento é próximo e totalmente personalizado. Juntas, vamos construir um caminho leve e estratégico para você alcançar seus objetivos. Veja o que te espera:</p>
@@ -80,7 +101,7 @@ const Index = () => {
         </section>
 
         {/* É pra você se... */}
-        <section className="py-20 px-6 md:px-12">
+        <section className="py-20 px-6 md:px-12 bg-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-stone-800 mb-8">Você se identifica?</h2>
             <div className="space-y-6 text-left">
@@ -104,7 +125,7 @@ const Index = () => {
         </section>
         
         {/* Testimonials Section */}
-        <section className="py-20 px-6 md:px-12 bg-white">
+        <section className="py-20 px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-stone-800 mb-12">O que minhas pacientes dizem</h2>
             <Carousel
