@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Check, Leaf, Heart, MessageCircle, MapPin } from "lucide-react";
 
 const Index = () => {
   const whatsappLink = "https://api.whatsapp.com/send?phone=5500000000000&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20método%20LeveFEM!";
+
+  const testimonials = Array.from({ length: 10 }, (_, i) => `/testimonials/testimonial-${i + 1}.jpeg`);
 
   const FeatureCard = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
     <div className="flex items-start space-x-4">
@@ -102,14 +105,31 @@ const Index = () => {
         
         {/* Testimonials Section */}
         <section className="py-20 px-6 md:px-12 bg-white">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-stone-800 mb-12">O que minhas pacientes dizem</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Placeholder for testimonials */}
-              <Card className="text-center"><CardContent className="p-6">Depoimento em breve...</CardContent></Card>
-              <Card className="text-center"><CardContent className="p-6">Depoimento em breve...</CardContent></Card>
-              <Card className="text-center"><CardContent className="p-6">Depoimento em breve...</CardContent></Card>
-            </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {testimonials.map((src, index) => (
+                  <CarouselItem key={index} className="flex justify-center md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="shadow-lg">
+                        <CardContent className="flex items-center justify-center p-2 bg-stone-100 rounded-lg">
+                          <img src={src} alt={`Depoimento ${index + 1}`} className="rounded-md max-h-[500px] object-contain" />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
         </section>
 
