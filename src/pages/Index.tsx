@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Check, Leaf, Heart, MessageCircle, MapPin } from "lucide-react";
+import { Check, Leaf, Heart, MessageCircle, MapPin, Instagram } from "lucide-react";
 
 const Index = () => {
   const whatsappLink = "https://api.whatsapp.com/send?phone=5500000000000&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20método%20LeveFEM!";
@@ -44,7 +44,7 @@ const Index = () => {
         </section>
 
         {/* O que é o LeveFEM? */}
-        <section className="py-20 px-6 md:px-12">
+        <section id="metodo" className="py-20 px-6 md:px-12">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-stone-800 mb-4">Mais que um método, uma nova relação com seu corpo.</h2>
@@ -63,7 +63,7 @@ const Index = () => {
         </section>
 
         {/* About Thais Section */}
-        <section className="py-20 px-6 md:px-12 bg-white">
+        <section id="sobre" className="py-20 px-6 md:px-12 bg-white">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img src="/thais-aires-desk.jpeg" alt="Nutricionista Thaís Aires" className="rounded-lg shadow-xl w-full max-w-sm" />
@@ -84,7 +84,7 @@ const Index = () => {
         </section>
 
         {/* Como funciona? */}
-        <section className="py-20 px-6 md:px-12">
+        <section id="jornada" className="py-20 px-6 md:px-12">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-stone-800 mb-12">Sua jornada de transformação, passo a passo</h2>
             <p className="text-center text-lg mb-12 max-w-3xl mx-auto">Meu acompanhamento é próximo e totalmente personalizado. Juntas, vamos construir um caminho leve e estratégico para você alcançar seus objetivos. Veja o que te espera:</p>
@@ -130,7 +130,7 @@ const Index = () => {
         </section>
         
         {/* Testimonials Section */}
-        <section className="py-20 px-6 md:px-12">
+        <section id="depoimentos" className="py-20 px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-stone-800 mb-12">O que minhas pacientes dizem</h2>
             <Carousel
@@ -177,9 +177,42 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-stone-800 text-white py-8 px-6 md:px-12 text-center">
-        <img src="/logo-full.png" alt="Logo Thaís Aires" className="h-20 mx-auto mb-4" style={{ filter: 'brightness(0) invert(1)' }}/>
-        <p>&copy; {new Date().getFullYear()} Thaís Aires Nutricionista. Todos os direitos reservados.</p>
+      <footer className="bg-stone-800 text-white">
+        <div className="max-w-6xl mx-auto py-12 px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            {/* Column 1: Logo and Copyright */}
+            <div className="flex flex-col items-center md:items-start">
+              <a href="#">
+                <img src="/logo-full.png" alt="Logo Thaís Aires" className="h-20 mb-4" style={{ filter: 'brightness(0) invert(1)' }}/>
+              </a>
+              <p className="text-sm text-stone-400">&copy; {new Date().getFullYear()} Thaís Aires Nutricionista. <br/> Todos os direitos reservados.</p>
+            </div>
+
+            {/* Column 2: Navigation */}
+            <div>
+              <h3 className="font-semibold text-lg mb-4">Navegação</h3>
+              <ul className="space-y-2">
+                <li><a href="#metodo" className="hover:text-rose-200 transition-colors">O Método</a></li>
+                <li><a href="#sobre" className="hover:text-rose-200 transition-colors">Sobre Mim</a></li>
+                <li><a href="#jornada" className="hover:text-rose-200 transition-colors">Sua Jornada</a></li>
+                <li><a href="#depoimentos" className="hover:text-rose-200 transition-colors">Depoimentos</a></li>
+              </ul>
+            </div>
+
+            {/* Column 3: Social Media */}
+            <div>
+              <h3 className="font-semibold text-lg mb-4">Siga-me</h3>
+              <div className="flex justify-center md:justify-start space-x-4">
+                <a href="/#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <Instagram className="h-6 w-6 hover:text-rose-200 transition-colors" />
+                </a>
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                  <MessageCircle className="h-6 w-6 hover:text-rose-200 transition-colors" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
