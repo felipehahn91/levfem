@@ -5,6 +5,7 @@ import { Check, Leaf, Heart, MessageCircle, MapPin, Instagram } from "lucide-rea
 
 const Index = () => {
   const whatsappLink = "https://api.whatsapp.com/send?phone=5521969208660&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20método%20LeveFEM!";
+  const instagramLink = "https://www.instagram.com/thais_airesnutri/";
 
   const testimonials = Array.from({ length: 10 }, (_, i) => `/testimonials/testimonial-${i + 1}.jpeg`);
 
@@ -203,7 +204,7 @@ const Index = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Siga-me</h3>
               <div className="flex justify-center md:justify-start space-x-4">
-                <a href="https://www.instagram.com/thais_airesnutri/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href={instagramLink} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram className="h-6 w-6 hover:text-rose-200 transition-colors" />
                 </a>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
