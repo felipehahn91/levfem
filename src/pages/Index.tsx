@@ -159,7 +159,7 @@ const Index = () => {
             </Carousel>
             <div className="text-center mt-12">
               <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
-                Agende sua consulta e comece a mudança
+                Quero agendar minha consulta
               </Button>
             </div>
           </div>
