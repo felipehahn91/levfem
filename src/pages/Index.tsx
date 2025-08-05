@@ -38,7 +38,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-red-900 tracking-tight">Reconecte-se com seu corpo. Transforme sua saúde.</h1>
             <p className="mt-4 text-xl md:text-2xl text-stone-700">Descubra o LeveFEM: a jornada de emagrecimento que respeita seus ciclos, equilibra seus hormônios e devolve sua autoestima, com leveza e sem dietas restritivas.</p>
-            <Button onClick={() => window.open(whatsappLink, '_blank')} size="lg" className="mt-8 bg-red-900 hover:bg-red-800 text-white rounded-full px-10 py-6 text-lg">
+            <Button onClick={() => window.open(whatsappLink, '_blank')} className="mt-8 bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
               Comece sua transformação agora!
             </Button>
           </div>
@@ -123,7 +123,7 @@ const Index = () => {
               </Card>
             </div>
             <div className="mt-12">
-              <Button onClick={() => window.open(whatsappLink, '_blank')} size="lg" className="bg-red-900 hover:bg-red-800 text-white rounded-full px-10 py-6 text-lg">
+              <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
                 Quero fazer as pazes com meu corpo
               </Button>
             </div>
@@ -158,7 +158,7 @@ const Index = () => {
               <CarouselNext className="hidden md:flex" />
             </Carousel>
             <div className="text-center mt-12">
-              <Button onClick={() => window.open(whatsappLink, '_blank')} size="lg" className="bg-red-900 hover:bg-red-800 text-white rounded-full px-10 py-6 text-lg">
+              <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
                 Agende sua consulta e comece a mudança
               </Button>
             </div>
@@ -170,7 +170,7 @@ const Index = () => {
            <div className="bg-red-900/80 py-20">
             <h2 className="text-4xl font-bold text-white mb-4">Sua nova vida, mais leve e saudável, começa hoje.</h2>
             <p className="text-xl text-rose-100 mb-8 max-w-2xl mx-auto">Chega de esperar. Dê o primeiro passo para a mulher que você deseja ser. Estou aqui para te guiar.</p>
-            <Button onClick={() => window.open(whatsappLink, '_blank')} size="lg" className="bg-white text-red-900 hover:bg-rose-100 rounded-full px-10 py-6 text-lg font-bold">
+            <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-white text-red-900 hover:bg-rose-100 rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg font-bold">
               Quero transformar minha saúde
             </Button>
            </div>
