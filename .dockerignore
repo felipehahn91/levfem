@@ -12,7 +12,6 @@ build
 # Docker
 Dockerfile
 .dockerignore
-nginx/
 
 # Env
 .env
