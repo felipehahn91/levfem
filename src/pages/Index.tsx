@@ -2,12 +2,23 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Check, Leaf, Heart, MessageCircle, MapPin, Instagram } from "lucide-react";
+import { sendGTMEvent } from "@/lib/gtm";
 
 const Index = () => {
   const whatsappLink = "https://api.whatsapp.com/send?phone=5521969208660&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20método%20LeveFEM!";
   const instagramLink = "https://www.instagram.com/thais_airesnutri/";
 
   const testimonials = Array.from({ length: 10 }, (_, i) => `/testimonials/testimonial-${i + 1}.jpeg`);
+
+  const handleCTAClick = (location: string) => {
+    sendGTMEvent({
+      event: 'cta_click',
+      event_category: 'CTA',
+      event_action: 'whatsapp_redirect',
+      event_label: location,
+    });
+    window.open(whatsappLink, '_blank');
+  };
 
   const FeatureCard = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
     <div className="flex items-start space-x-4">
@@ -26,7 +37,7 @@ const Index = () => {
         <a href="#">
           <img src="/logo-full.png" alt="Logo Thaís Aires" className="h-16" />
         </a>
-        <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6">
+        <Button onClick={() => handleCTAClick('header')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6">
           Agendar Consulta
         </Button>
       </header>
@@ -38,7 +49,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-red-900 tracking-tight">Reconecte-se com seu corpo. Transforme sua saúde.</h1>
             <p className="mt-4 text-xl md:text-2xl text-stone-700">Descubra o LeveFEM: a jornada de emagrecimento que respeita seus ciclos, equilibra seus hormônios e devolve sua autoestima, com leveza e sem dietas restritivas.</p>
-            <Button onClick={() => window.open(whatsappLink, '_blank')} className="mt-8 bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
+            <Button onClick={() => handleCTAClick('hero_section')} className="mt-8 bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
               Comece sua transformação agora!
             </Button>
           </div>
@@ -123,7 +134,7 @@ const Index = () => {
               </Card>
             </div>
             <div className="mt-12">
-              <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
+              <Button onClick={() => handleCTAClick('identification_section')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
                 Quero fazer as pazes com meu corpo
               </Button>
             </div>
@@ -158,7 +169,7 @@ const Index = () => {
               <CarouselNext className="hidden md:flex" />
             </Carousel>
             <div className="text-center mt-12">
-              <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
+              <Button onClick={() => handleCTAClick('testimonials_section')} className="bg-red-900 hover:bg-red-800 text-white rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg">
                 Quero agendar minha consulta
               </Button>
             </div>
@@ -170,7 +181,7 @@ const Index = () => {
            <div className="bg-red-900/80 py-20">
             <h2 className="text-4xl font-bold text-white mb-4">Sua nova vida, mais leve e saudável, começa hoje.</h2>
             <p className="text-xl text-rose-100 mb-8 max-w-2xl mx-auto">Chega de esperar. Dê o primeiro passo para a mulher que você deseja ser. Estou aqui para te guiar.</p>
-            <Button onClick={() => window.open(whatsappLink, '_blank')} className="bg-white text-red-900 hover:bg-rose-100 rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg font-bold">
+            <Button onClick={() => handleCTAClick('final_cta_section')} className="bg-white text-red-900 hover:bg-rose-100 rounded-full px-6 py-4 text-base md:px-10 md:py-6 md:text-lg font-bold">
               Quero transformar minha saúde
             </Button>
            </div>
